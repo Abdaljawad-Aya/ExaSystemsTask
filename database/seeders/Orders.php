@@ -1,12 +1,11 @@
 <?php
 
 namespace Database\Seeders;
-// use Carbon\Carbon;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ExaUserSeeder extends Seeder
+class Orders extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,75 +14,67 @@ class ExaUserSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('user')->truncate();
-        DB::table('user')->insert(array(
+        DB::table('orders')->insert(array(
             0 => array(
-                'full_name' => "Adam Q. Hinton",
-                'slug' => "Ante Corp.",
+                "status" => "canceled",
+                "user_id" => 1,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             1 => array(
-                'full_name' => "Melissa A. Hinton",
-                'slug' => "Enim Nec LLP",
+                "status" => "inProgress",
+                "user_id" => 2,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             2 => array(
-                'full_name' => "Ulla C. Donaldson",
-                'slug' => "delectus aut autem",
+                "status" => "delivered",
+                "user_id" => 3,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             3 => array(
-                'full_name' => "Channing Ballard",
-                'slug' => "delectus aut autem",
+                "status" => "delivered",
+                "user_id" => 4,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             4 => array(
-                'full_name' => "Elizabeth Dyer",
-                'slug' => "delectus aut autem",
+                "status" => "returned",
+                "user_id" => 5,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             5 => array(
-                "full_name" => "Clayton Rutledge",
-                "slug" => "dolor sit amet, consectetuer adipiscing elit",
+                "status" => "shipped",
+                "user_id" => 6,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             6 => array(
-                "full_name" => "Jamalia Davenport",
-                "slug" => "dolor sit amet, consectetuer adipiscing elit",
+                "status" => "partiallyDelivered",
+                "user_id" => 7,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             7 => array(
-                "full_name" => "Tate Hunter",
-                "slug" => "consectetuer adipiscing elit",
+                "status" => "inProgress",
+                "user_id" => 8,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             8 => array(
-                "full_name" => "Ulla C. Donaldson",
-                "slug" => "Mi Tempor Limited",
+                "status" => "delivered",
+                "user_id" => 9,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
             9 => array(
-                "full_name" => "Ian K. Butler",
-                "slug" => "Varius Associates",
+                "status" => "delivered",
+                "user_id" => 10,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
             ),
-            10 => array(
-                "full_name" => "Shea K. Adkins",
-                "slug" => "Nec Ante Blandit Incorporated",
-                'created_at' => date('Y/m/d H:i:s'),
-                'updated_at' => date('Y/m/d H:i:s')
-            ),
-
         ));
     }
 }
