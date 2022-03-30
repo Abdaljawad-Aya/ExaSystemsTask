@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+// use Carbon\Carbon;
 use App\Models\ExaUsers;
 use Illuminate\Http\Request;
 
@@ -15,10 +17,11 @@ class UsersController extends Controller
     public function index()
     {
         $users = ExaUsers::all();
-        // dd($users);
         return view('users.index', [
-            'users' => $users
+            'users' => $users,
         ]);
+        // $users = Carbon::now();
+        // return $users->toArray();
     }
 
     /**
@@ -50,9 +53,9 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $users = ExaUsers::find($id);
-        dd($users);
-        return view('users.index')->with('user', $users);
+        // $users = ExaUsers::find($id);
+        // dd($users);
+        // return view('users.index')->with('user', $users);
     }
 
     /**

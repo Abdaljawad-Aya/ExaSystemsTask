@@ -50,6 +50,9 @@
                                         <td>
                                             {{ $user->slug }}
                                         </td>
+                                        <td>
+                                            {{ date('Y-m-d H:i:s') }}
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

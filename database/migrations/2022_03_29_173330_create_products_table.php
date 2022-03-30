@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
                     ->references('id')
                     ->on('merchants')
                     ->onDelete('cascade');
-                $table->timestamps();
+                $table->dateTime('Y-m-d H:i:s');
             });
         // }
     }
