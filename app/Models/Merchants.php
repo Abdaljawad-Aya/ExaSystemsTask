@@ -12,7 +12,7 @@ class Merchants extends Model
     protected $table = 'merchants';
     protected $primaryKey = 'id';
 
-    public function users()
+    public function exaUsers()
     {
         return $this->belongsTo(ExaUsers::class);
     }

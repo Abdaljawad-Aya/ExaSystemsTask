@@ -1,0 +1,6 @@
+- create new project 
+composer create-project laravel/laravel exasystemstask
+- change the host and the port 
+php artisan serve --host=localhost --port=3030
+- run the app 
+php artisan serve 

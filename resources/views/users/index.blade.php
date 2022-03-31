@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-{{-- Table start --}}
+            {{-- Table start --}}
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -42,19 +42,31 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $user)
+
+                                    @forelse ($products as $product)
                                     <tr>
                                         <td>
-                                            {{ $user->full_name }}
+                                            {{ $product->name }}
                                         </td>
                                         <td>
-                                            {{ $user->slug }}
+                                            {{ $product->price }}
                                         </td>
                                         <td>
-                                            {{ date('Y-m-d H:i:s') }}
+                                            {{ date('Y-m-d') }}
+                                        </td>
+                                        <td>
+                                            @foreach ($merchants as $merchant)
+                                            {{ $merchant->marchant_name }}
+                                            @endforeach
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    @empty
+                                    <p>
+                                        No Products Found!
+                                    </p>
+                                    @endforelse
+
+
                                 </tbody>
                             </table>
                         </div>

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Order_item extends Model
 {
     use HasFactory;
+
+    public function exaUsers() 
+    {
+        return $this->belongsToMany(ExaUsers::class);
+    }
 }

@@ -18,13 +18,13 @@ class CreateProductsTable extends Migration
                 $table->id('id');
                 $table->string('name');
                 $table->string('products_status');
-                $table->integer('price');
+                $table->float('price');
                 $table->unsignedBigInteger('merchant_id');
                 $table->foreign('merchant_id')
                     ->references('id')
                     ->on('merchants')
                     ->onDelete('cascade');
-                $table->dateTime('Y-m-d H:i:s');
+                $table->dateTime('start');
             });
         // }
     }

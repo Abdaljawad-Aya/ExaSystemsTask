@@ -1,11 +1,11 @@
 Five Tables 
 
-users => done
-merchants => 
-orders => 
+user => done
+merchants => done
+orders => done
 
-order_items  
-products  
+order_items => done
+products => done
  
 First step 
 
@@ -18,7 +18,7 @@ Develope an api with PHP/Laravel
 Remember the unordered products are supposed to be at the TOP of the least ordered.
 
 **Seeding your database with a good amount of data will help you with testing.
-** There is a other way besides the seeders method called tinker also for filling fake data using factory, tinker is from my opinon is alot faster and less time consuming than seeder
+** There is another way besides the seeders method called tinker also for filling fake data using factory, tinker is from my opinon is alot faster and less time consuming than seeder
 
 ##########################
 

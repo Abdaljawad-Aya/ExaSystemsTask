@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
-// use Carbon\Carbon;
 use App\Models\ExaUsers;
+use App\Models\Merchants;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
@@ -16,9 +17,17 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = ExaUsers::all();
+        // $users = ExaUsers::all();
+        // $merchants = Merchants::all();
+        // $product = Product::all();
+        $users=DB::table('users')->get();
+        $merchants=DB::table('merchants')->get();
+        $product=DB::table('products')->get();
+      
         return view('users.index', [
             'users' => $users,
+            'merchants' => $merchants,
+            'products' => $product
         ]);
         // $users = Carbon::now();
         // return $users->toArray();
@@ -53,9 +62,18 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        // $users = ExaUsers::find($id);
+        $users = ExaUsers::find($id);
+        $products = Product::find($id);
+        $merchants = Merchants::find($id);
+        //  print_r($merchants);
+
         // dd($users);
-        // return view('users.index')->with('user', $users);
+
+        return view('users.index')
+                    ->with('users', $users)
+                    ->with('merchants', $merchants)
+                    ->with('products', $products);
+        
     }
 
     /**
